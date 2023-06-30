@@ -156,6 +156,7 @@ export const HeroContainer = styled.div`
 
         img {
           max-height: 22px;
+          width: 10px;
         }
       }
 

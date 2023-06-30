@@ -41,7 +41,7 @@ const Navbar = () => {
         <MdMenu />
       </div>
 
-      <ul className={isOpen ? "navItems hide-item" : "navItems"}>
+      <ul className={!isOpen ? "navItems hide-item" : "navItems"}>
         <div
           className="closeNavIcon"
           onClick={toggle}
