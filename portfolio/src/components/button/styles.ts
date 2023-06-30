@@ -19,7 +19,7 @@ export const ButtonContainer = styled.div<ButtonContainerProps>`
 
   .button {
     font-size: 2.2rem;
-    padding: 0.7em 2em;
+    padding: 1rem 2rem;
     border: 2px solid var(--ash-gray);
     border-radius: 8px;
     display: inline-block;

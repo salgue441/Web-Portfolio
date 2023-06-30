@@ -25,6 +25,8 @@ export const HeroContainer = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
   }
 
   .hero__heading {

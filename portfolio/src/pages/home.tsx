@@ -10,6 +10,7 @@
 // Components
 import HeroSection from "../components/heroSection/heroSection"
 import AboutSection from "../components/aboutSection/aboutSection"
+import ServicesSection from "../components/servicesSection/servicesSection"
 
 /**
  * @brief
@@ -21,6 +22,7 @@ const Home = () => {
     <>
       <HeroSection />
       <AboutSection />
+      <ServicesSection />
     </>
   )
 }
