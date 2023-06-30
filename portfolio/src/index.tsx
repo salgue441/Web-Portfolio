@@ -1,19 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/**
+ * @file index.tsx
+ * @brief Entry point of the website.
+ * @author Carlos Salguero
+ * @version 1.0
+ * @date 2023-06-29
+ *
+ * @copyright Copyright (c) - MIT License
+ */
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+// React
+import ReactDOM from "react-dom/client"
+import { HashRouter as Router } from "react-router-dom"
+
+// App Component
+import App from "./App"
+
+// Theme
+import GlobalStyles from "./theme/globalStyles"
+import Typography from "./theme/typography"
+
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
+
+/**
+ * @brief
+ * Renders the main component of the website.
+ */
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  <>
+    <Router>
+      <GlobalStyles />
+      <Typography />
+      <App />
+    </Router>
+  </>
+)

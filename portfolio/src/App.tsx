@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/**
+ * @file App.tsx
+ * @brief This file contains the main component of the website.
+ * @author Carlos Salguero
+ * @version 1.0
+ * @date 2023-06-29
+ *
+ * @copyright Copyright (c) - MIT License
+ */
 
+/**
+ * @brief
+ * This function is the main component of the website.
+ * @returns The main component of the website.
+ */
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello World!</h1>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
