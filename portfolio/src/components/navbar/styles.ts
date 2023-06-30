@@ -60,6 +60,8 @@ export const NavContainer = styled.nav`
 
   @media screen and (max-width: 768px) {
     padding: 0;
+    height: 85px;
+    background-color: var(--dark-light);
 
     .hide-item {
       transform: translateY(calc(-100% - var(--top)));
@@ -67,26 +69,43 @@ export const NavContainer = styled.nav`
 
     .mobile-menu-icon {
       display: block;
+      position: absolute;
+      top: 2rem;
+      left: 1.5rem;
+      width: 4rem;
+      cursor: pointer;
+      outline: none;
+
+      * {
+        pointer-events: none;
+      }
     }
 
     .navItems {
-      --top: 1rem;
-      transition: 0.3s ease transform;
-      background-color: var(--dark-light);
+      --top: 0rem;
+      transition: all 0.3s ease-in-out;
+      background-color: var(--black-olive);
       padding: 2rem;
-      width: 90%;
-      max-width: 300px;
-      border-radius: 12px;
+      width: 100%;
+      max-width: 100%;
+      height: calc(100vh);
       position: absolute;
-      right: 1rem;
+
       top: var(--top);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
 
       .closeNavIcon {
         display: block;
         width: 3rem;
         margin: 0 0 0 auto;
         cursor: pointer;
-
+        transition: all 0.3s ease-in-out;
+        transform: translate(-1300%, -640%);
         * {
           pointer-events: none;
         }

@@ -31,6 +31,9 @@ const GlobalStyles = createGlobalStyle`
         --ash-gray: #9db5b2;
         --light-cyan: #daf0ee;
         --tiffany-blue: #94d1be; 
+
+        // Position
+        --top: 2rem;
     }
 
     html {

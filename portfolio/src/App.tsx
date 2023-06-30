@@ -12,7 +12,9 @@ import { Routes, Route } from "react-router-dom"
 
 // Components
 import Navbar from "./components/navbar/navbar"
-import HeroSection from "./components/heroSection/heroSection"
+
+// Views
+import Home from "./pages/home"
 
 /**
  * @brief
@@ -25,7 +27,7 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<HeroSection />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </div>
   )
