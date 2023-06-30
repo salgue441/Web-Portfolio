@@ -19,7 +19,7 @@ const Typography = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
 
-    *, *::before, *::after {
+    *{
         font-family: "Roboto Mono", monospace;
         color: var(--gray);
     }

@@ -24,6 +24,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     :root {
+        --dark: #1e1e1e;
         --white: #ffffff;
         --black-olive: #3b413c;
         --ash-gray: #9db5b2;
@@ -32,14 +33,14 @@ const GlobalStyles = createGlobalStyle`
     }
 
     html {
-        background-color: var(--black-olive);
+        background-color: var(--dark);
         color: var(--white);
     }
 
     body {
         font-size: 1.6rem;
         font-family: "Roboto Mono", monospace;
-        background-color: var(--black-olive);
+        background-color: var(--dark);
         color: var(--white);
     }
 

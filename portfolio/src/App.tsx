@@ -8,6 +8,9 @@
  * @copyright Copyright (c) - MIT License
  */
 
+// Components
+import HeroSection from "./components/heroSection/heroSection"
+
 /**
  * @brief
  * This function is the main component of the website.
@@ -16,7 +19,7 @@
 function App() {
   return (
     <div className="App">
-      <h1>Hello World!</h1>
+      <HeroSection />
     </div>
   )
 }
