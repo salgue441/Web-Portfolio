@@ -7,8 +7,11 @@
  *
  * @copyright Copyright (c) - MIT License
  */
+// React
+import { Routes, Route } from "react-router-dom"
 
 // Components
+import Navbar from "./components/navbar/navbar"
 import HeroSection from "./components/heroSection/heroSection"
 
 /**
@@ -19,7 +22,11 @@ import HeroSection from "./components/heroSection/heroSection"
 function App() {
   return (
     <div className="App">
-      <HeroSection />
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<HeroSection />} />
+      </Routes>
     </div>
   )
 }
