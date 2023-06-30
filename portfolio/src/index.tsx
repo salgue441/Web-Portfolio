@@ -16,8 +16,8 @@ import { HashRouter as Router } from "react-router-dom"
 import App from "./App"
 
 // Theme
-import GlobalStyles from "./theme/globalStyles"
-import Typography from "./theme/typography"
+import GlobalStyles from "./styles/globalStyles"
+import Typography from "./styles/typography"
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 
