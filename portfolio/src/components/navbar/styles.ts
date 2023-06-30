@@ -68,12 +68,13 @@ export const NavContainer = styled.nav`
     }
 
     .mobile-menu-icon {
-      display: block;
-      position: absolute;
+      position: fixed;
       top: 2rem;
       left: 1.5rem;
       width: 4rem;
       cursor: pointer;
+      z-index: 101;
+      display: block;
       outline: none;
 
       * {
@@ -98,18 +99,7 @@ export const NavContainer = styled.nav`
       align-items: center;
       justify-content: center;
       gap: 2rem;
-
-      .closeNavIcon {
-        display: block;
-        width: 3rem;
-        margin: 0 0 0 auto;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        transform: translate(-1300%, -640%);
-        * {
-          pointer-events: none;
-        }
-      }
+    }
 
       li {
         display: block;

@@ -38,7 +38,7 @@ const Navbar = () => {
         tabIndex={0}
         onKeyDown={toggle}
       >
-        <MdMenu />
+        {isOpen ? <MdClose /> : <MdMenu />}
       </div>
 
       <ul className={!isOpen ? "navItems hide-item" : "navItems"}>
