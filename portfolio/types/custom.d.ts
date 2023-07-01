@@ -22,3 +22,16 @@ declare module "*.svg" {
   const path: string
   export default path
 }
+
+declare interface Project {
+  projectID: number
+  projectName: string
+  projectDescription: string
+  projectImage: string
+  projectUrl: string
+}
+
+// Modules
+declare module "crypto-browserify"
+declare module "timers-browserify"
+declare module "stream-browserify"

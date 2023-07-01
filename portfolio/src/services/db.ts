@@ -10,6 +10,9 @@
 
 import { createPool, Pool } from "mysql"
 
+// Load modules
+import "../polyfills/polyfills"
+
 // Create a connection pool
 let pool: Pool
 

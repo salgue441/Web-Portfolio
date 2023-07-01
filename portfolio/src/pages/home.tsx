@@ -11,6 +11,7 @@
 import HeroSection from "../components/heroSection/heroSection"
 import AboutSection from "../components/aboutSection/aboutSection"
 import ServicesSection from "../components/servicesSection/servicesSection"
+import ProjectSection from "../components/projectSection/projectSection"
 
 /**
  * @brief
@@ -23,6 +24,7 @@ const Home = () => {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      <ProjectSection />
     </>
   )
 }
