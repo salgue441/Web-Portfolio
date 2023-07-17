@@ -26,6 +26,7 @@ import { ProjectSectionContainer } from "./style"
 
 SwiperCore.use([Navigation])
 
+// Interfaces
 /**
  * @brief
  * Project section component
@@ -35,17 +36,22 @@ const ProjectSection = () => {
   const [projectData, setProjectData] = useState<Project[]>([])
 
   useEffect(() => {
-    const fetchProjectData = async () => {
-      const results = await execute<Project[]>("SELECT * FROM projects")
-      setProjectData(results)
+    /**
+     * @brief
+     * Gets the last 5 projects based off date created from the database.
+     * Sets the project data to the state.
+     * @return {void} No return
+     */
+    const getProjects = async () => {
+      const projects = await execute<Project[]>(
+        "select * from projects order by projectDate desc limit 5"
+      )
 
-      try {
-      } catch (error) {
-        console.log(error)
-        throw new Error("Error fetching project data")
-      }
+      setProjectData(projectData)
     }
-  })
+
+    getProjects()
+  }, [])
 
   return (
     <ProjectSectionContainer id="projects">
@@ -75,7 +81,7 @@ const ProjectSection = () => {
                   title={project.projectName}
                   img={project.projectImage}
                   desc={project.projectDescription}
-                  link={project.projectUrl}
+                  link={project.projectLink}
                 />
               </SwiperSlide>
             ))}

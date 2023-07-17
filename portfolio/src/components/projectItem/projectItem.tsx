@@ -31,7 +31,7 @@ const ProjectItem = ({
   icon = <FiGithub />,
   link = "#",
 }: {
-  img: string
+  img: string | undefined
   title?: string
   desc?: string
   icon?: any

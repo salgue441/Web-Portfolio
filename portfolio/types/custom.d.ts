@@ -23,15 +23,20 @@ declare module "*.svg" {
   export default path
 }
 
+/**
+ * @brief
+ * Custom type for the project object
+ * @interface Project
+ * @property {number} projectID Project ID
+ * @property {string} projectName Project name
+ * @property {string | null} projectDescription Project description
+ * @property {string | null} projectLink Project link
+ * @property {string | null} projectImage Project image
+ */
 declare interface Project {
   projectID: number
   projectName: string
-  projectDescription: string
-  projectImage: string
-  projectUrl: string
+  projectDescription?: string | null
+  projectLink?: string
+  projectImage?: string | null
 }
-
-// Modules
-declare module "crypto-browserify"
-declare module "timers-browserify"
-declare module "stream-browserify"

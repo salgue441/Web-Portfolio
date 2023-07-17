@@ -7,59 +7,58 @@
  *
  * @copyright Copyright (c) - MIT License
  */
+import { createPool, Pool, PoolConnection } from "mariadb"
 
-import { createPool, Pool } from "mysql"
-
-// Load modules
-import "../polyfills/polyfills"
-
-// Create a connection pool
 let pool: Pool
 
 /**
  * @brief
- * Generates the pool connection to the database
+ * Creates a connection pool to the database
+ * @throws Error if the connection to the database fails
  */
-export const init = () => {
+export const init = async () => {
   try {
     pool = createPool({
-      connectionLimit: 10,
       host: process.env.DB_HOST,
       user: process.env.DB_USER,
       password: process.env.DB_PASS,
       database: process.env.DB_NAME,
+      connectionLimit: 10,
       port: Number(process.env.DB_PORT),
     })
 
+    const connection = await pool.getConnection()
+    connection.release()
+
     console.log("Database connected")
   } catch (error) {
-    console.log(error)
-    throw new Error("Error connecting to database")
+    console.log("Error connecting to database " + error)
+    throw new Error("Error connecting to database " + error)
   }
 }
 
 /**
  * @brief
- * Executes SQL queries to the database
- * @param {string} query - provided query
- * @param {string[] | Object} params - provided parameters for the query
- * @return {Promise<T>} - returns a promise with the result of the query
+ * Executes a query to the database and returns the result
+ * @param query SQL query to execute
+ * @param params Parameters to pass to the query
+ * @returns Result of the query
+ * @throws Error if the database is not initialized
  */
-export const execute = <T>(
+export const execute = async <T>(
   query: string,
-  params?: string[] | Object
+  params?: (string | number)[] | Record<string, any>
 ): Promise<T> => {
   try {
     if (!pool) throw new Error("Database not initialized")
 
-    return new Promise<T>((resolve, reject) => {
-      pool.query(query, params, (error, results) => {
-        if (error) reject(error)
-        else resolve(results)
-      })
-    })
+    const connection: PoolConnection = await pool.getConnection()
+    const result = await connection.query(query, params)
+    connection.release()
+
+    return result
   } catch (error) {
-    console.log(error)
-    throw new Error("Error executing query")
+    console.log("Error executing query " + error)
+    throw new Error("Error executing query " + error)
   }
 }
