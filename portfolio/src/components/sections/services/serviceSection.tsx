@@ -8,8 +8,8 @@
  * @copyright Copyright (c) - MIT License
  */
 // Components
-import SectionTitle from "../sectionTitle/sectionTitle"
-import ServiceItem from "../serviceItem/serviceItem"
+import SectionTitle from "../title/sectionTitle"
+import ServiceItem from "../../items/service/serviceItem"
 
 // Icons
 import { MdCode, MdEngineering, MdDesktopWindows } from "react-icons/md"

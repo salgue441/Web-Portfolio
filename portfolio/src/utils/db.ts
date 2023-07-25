@@ -7,7 +7,7 @@
  *
  * @copyright Copyright (c) - MIT License
  */
-import { createPool, Pool, PoolConnection } from "mariadb"
+import { createPool, Pool, PoolConfig, PoolConnection } from "mariadb"
 
 let pool: Pool
 
@@ -26,11 +26,6 @@ export const init = async () => {
       connectionLimit: 10,
       port: Number(process.env.DB_PORT),
     })
-
-    const connection = await pool.getConnection()
-    connection.release()
-
-    console.log("Database connected")
   } catch (error) {
     console.log("Error connecting to database " + error)
     throw new Error("Error connecting to database " + error)

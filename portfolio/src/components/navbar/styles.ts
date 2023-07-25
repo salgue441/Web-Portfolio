@@ -6,7 +6,7 @@ export const NavContainer = styled.nav`
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 1rem 0;
+  padding: 0.9rem 0;
   background-color: var(--dark-light);
 
   ul {
@@ -30,7 +30,7 @@ export const NavContainer = styled.nav`
       display: inline-block;
       padding: 1rem 2rem;
       color: var(--gray);
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-family: "Roboto Mono", monospace;
       outline: none;
     }

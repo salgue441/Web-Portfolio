@@ -8,15 +8,15 @@
  * @copyright Copyright (c) - MIT License
  */
 // Components
-import PText from "../PText/ptext"
+import PText from "../../PText/ptext"
 
 // Styles
 import { HeroContainer } from "./styles"
 
 // Assets
-import { SocialData } from "../../assets/data/socialLinks"
-import heroImg from "../../assets/images/hero.jpg"
-import SocialMediaArrow from "../../assets/images/social-media-arrow.svg"
+import { SocialData } from "../../../assets/data/socialLinks"
+import heroImg from "../../../assets/images/hero.jpg"
+import SocialMediaArrow from "../../../assets/images/social-media-arrow.svg"
 
 /**
  * @brief

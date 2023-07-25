@@ -10,19 +10,21 @@
 import { useEffect, useState } from "react"
 
 // Components
-import ProjectItem from "../projectItem/projectItem"
-import SectionTitle from "../sectionTitle/sectionTitle"
+import ProjectItem from "../../items/project/projectItem"
+import SectionTitle from "../title/sectionTitle"
 
 // Swiper core and required modules
 import { Swiper, SwiperSlide } from "swiper/react"
-import SwiperCore, { Navigation } from "swiper"
+import SwiperCore from "swiper"
+import Navigation from "swiper"
 import "swiper/swiper-bundle.min.css"
 
 // Database
-import { execute } from "../../services/db"
+import { execute } from "../../../utils/db"
 
-// Styles
+// Styles & Types
 import { ProjectSectionContainer } from "./style"
+import Project from "../../../model/project"
 
 SwiperCore.use([Navigation])
 
@@ -77,12 +79,12 @@ const ProjectSection = () => {
           >
             {projectData.map((project) => (
               <SwiperSlide key={project.projectID}>
-                <ProjectItem
+                {/* <ProjectItem
                   title={project.projectName}
                   img={project.projectImage}
                   desc={project.projectDescription}
                   link={project.projectLink}
-                />
+                /> */}
               </SwiperSlide>
             ))}
           </Swiper>

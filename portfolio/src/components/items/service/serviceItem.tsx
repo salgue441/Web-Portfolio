@@ -9,7 +9,7 @@
  */
 
 // Components
-import PText from "../PText/ptext"
+import PText from "../../PText/ptext"
 
 // Default Icons
 import { MdDesktopMac } from "react-icons/md"

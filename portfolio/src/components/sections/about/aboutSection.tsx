@@ -9,12 +9,12 @@
  */
 
 // Components
-import PText from "../PText/ptext"
-import Button from "../button/button"
-import SectionTitle from "../sectionTitle/sectionTitle"
+import PText from "../../PText/ptext"
+import Button from "../../button/button"
+import SectionTitle from "../title/sectionTitle"
 
 // Image
-import AboutImg from "../../assets/images/about.jpg"
+import AboutImg from "../../../assets/images/about.jpg"
 
 // Styles
 import { AboutSectionContainer } from "./styles"

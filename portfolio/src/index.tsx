@@ -7,12 +7,11 @@
  *
  * @copyright Copyright (c) - MIT License
  */
-
 // React
 import ReactDOM from "react-dom/client"
 import { HashRouter as Router } from "react-router-dom"
 
-// App Component
+// Components
 import App from "./App"
 
 // Theme
@@ -23,7 +22,7 @@ const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 
 /**
  * @brief
- * Renders the main component of the website.
+ * Renders the main component of the website
  */
 root.render(
   <>
