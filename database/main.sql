@@ -13,4 +13,3 @@ create table if not exists projects (
     projectLink varchar(255) not null,
     projectImage varchar(255)
 );
-
