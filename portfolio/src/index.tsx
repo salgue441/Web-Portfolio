@@ -11,6 +11,14 @@
 import ReactDOM from "react-dom/client"
 import { HashRouter as Router } from "react-router-dom"
 
+// Polyfills
+import "stream-browserify"
+import "crypto-browserify"
+import "os-browserify/browser"
+import "browserify-zlib"
+import "buffer"
+import "stream"
+
 // Components
 import App from "./App"
 

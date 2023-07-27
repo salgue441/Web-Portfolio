@@ -21,3 +21,11 @@ declare module "*.svg" {
   const path: string
   export default path
 }
+
+// Polyfill
+declare module "stream-browserify"
+declare module "crypto-browserify"
+declare module "os-browserify/browser"
+declare module "browserify-zlib"
+declare module "buffer"
+declare module "stream"

@@ -1,7 +1,7 @@
 -- DML operations for the database
 
 -- Inserting a new project
-insert into project (projectName, projectDescription, 
+insert into projects (projectName, projectDescription, 
                      projectLink, projectImage)
 values 
     (
